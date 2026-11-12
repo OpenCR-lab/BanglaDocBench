@@ -24,11 +24,9 @@ The pages are drawn from **[BanglaDocIndex](https://huggingface.co/datasets/Open
 ([code](https://github.com/OpenCR-lab/BanglaDocIndex)), a public index of 19,873,418 Bangla
 document pages with an EmbeddingGemma 2 embedding for every page.
 
-1. **Licence filter.** Only pages whose images may be redistributed are candidates (for
-   example public-domain and CC-BY pages on the Internet Archive, and NCTB textbooks).
-2. **Clustering.** The page embeddings are clustered to map the kinds of pages in the pool.
-3. **Selection.** Pages are sampled across clusters for diversity, with a fixed random seed.
-4. **Annotation.** Each selected page is annotated (text, reading order and layout).
+1. **Clustering.** The page embeddings are clustered to map the kinds of pages in the pool.
+2. **Selection.** Pages are sampled across clusters for diversity, with a fixed random seed.
+3. **Annotation.** Each selected page is annotated (text, reading order and layout).
 
 The selection is reproducible: the cluster labels, the selected page IDs, the seed and the
 selection code will be published with the benchmark, and the selected pages will be marked in
@@ -43,8 +41,16 @@ eval/        evaluation code and metrics
 
 ## Licence
 
-Code: [Apache-2.0](LICENSE). Annotations: CC-BY-4.0 (planned). Every page image keeps the
-licence of its source document, recorded per page.
+- **Code:** Apache-2.0 ([LICENSE](LICENSE)).
+- **Annotations:** CC-BY-4.0 (planned).
+- **Page images are not relicensed.** Each page image remains under the licence or terms of its
+  source document. The source, the source URL and the source's own rights statement are recorded
+  for every page. Many sources state no licence; copyright in those pages stays with their rights
+  holders, and they are included for research and evaluation only. Anyone using the images is
+  responsible for following the terms of each source.
+- **Removal requests:** if you hold the rights to a page and want it removed, open an issue at
+  [github.com/OpenCR-lab/BanglaDocBench/issues](https://github.com/OpenCR-lab/BanglaDocBench/issues)
+  with the page ID or source URL.
 
 ## Citation
 
